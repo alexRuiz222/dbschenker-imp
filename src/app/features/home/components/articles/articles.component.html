@@ -3,65 +3,29 @@
     trending articles for you
   </h4>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    @for (article of articles; track article.id) {
     <div class="col">
       <div class="card border-0">
         <img
-          src="https://www.dbschenker.com/resource/image/1790416/4:3/430/323/9d05aee4a6d09cc02cc31c6b18fccac/88F23128891396649E288A21465DC550/interkontinentale-transporte-mit-biokraftstoff-db-schenker-und-microsoft-cloud-logistics-arbeiten-an-nachhaltiger-logistik.jpg"
+          [ngSrc]="article.img"
           class="card-img"
-          alt="..."
+          [alt]="article.title"
+          width="250"
+          height="250"
         />
         <div class="card-body px-0">
           <h5 class="card-title fw-bold d-flex gap-2">
-            DB Schenker + Microsoft Cloud
+            {{ article.title }}
             <span class="material-symbols-outlined arrow-right">
               chevron_right
             </span>
           </h5>
           <p class="card-text">
-            DB Schenker collaborates with Microsoft Cloud Logistics on low
-            carbon intercontinental transportation and sustainable logistics.
+            {{ article.description }}
           </p>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card border-0">
-        <img
-          src="https://www.dbschenker.com/resource/image/1508344/4:3/430/323/357cdd8732b96cfbd657b4b27cd8aee5/46459C56DAC391367BB8E8F7AC5E4261/airplane-01.jpg"
-          class="card-img"
-          alt="..."
-        />
-        <div class="card-body px-0">
-          <h5 class="card-title fw-bold d-flex gap-2">
-            DB Schenker In Mexico City
-            <span class="material-symbols-outlined arrow-right">
-              chevron_right
-            </span>
-          </h5>
-          <p class="card-text">
-            Update on Cargo Operations at Mexico City's International Airport
-            (MEX) and New Airport Felipe Angeles (NLU).
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card border-0">
-        <img
-          src="https://www.dbschenker.com/resource/image/891682/4:3/430/323/dafdc9403df1927c5e96dea6c122be6e/1F9ABE55280CA179128D11E6A9177A54/electric-truck-horizontal.jpg"
-          class="card-img"
-          alt="..."
-        />
-        <div class="card-body px-0">
-          <h5 class="card-title fw-bold d-flex gap-2">
-            Into the Future of Electric Trucks
-            <span class="material-symbols-outlined arrow-right">
-              chevron_right
-            </span>
-          </h5>
-          <p class="card-text">Next step for all-electric trucks.</p>
-        </div>
-      </div>
-    </div>
+    }
   </div>
 </div>

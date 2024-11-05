@@ -1,10 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-
-interface NavItem {
-  name: string;
-  link: string;
-}
+import { INavItem } from '../../models/navitem.model';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +10,7 @@ interface NavItem {
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  navItems: NavItem[] = [
+  navItems: INavItem[] = [
     { name: 'Home', link: '/home' },
     { name: 'Business', link: '/business' },
     { name: 'Careers', link: '/careers' },

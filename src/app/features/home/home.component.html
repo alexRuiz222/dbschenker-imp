@@ -1,7 +1,11 @@
 <app-quote-shipment></app-quote-shipment>
 <div class="content">
-    <div class="content-body">
-        <app-services></app-services>
-        <app-articles></app-articles>
-    </div>
+  <div class="content-body">
+    <app-services></app-services>
+    @defer (on viewport; on timer(5s)) {
+    <app-articles></app-articles>
+    }@placeholder {
+    <div class="placeholder">loading...</div>
+    }
+  </div>
 </div>
