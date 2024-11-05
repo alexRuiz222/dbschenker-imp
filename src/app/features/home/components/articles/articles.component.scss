@@ -1,0 +1,16 @@
+@import '../../../../../../public/styles/variables';
+.card-title{
+    cursor: pointer;
+    .arrow-right{
+        font-size: 25px;
+        visibility: hidden;
+    }
+    &:hover{
+        
+        .arrow-right{
+            visibility:visible;
+            }
+            color: $red-skr;
+    }
+}
+

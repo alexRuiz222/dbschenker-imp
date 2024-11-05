@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.css';
+@import '../public/styles/variables.scss';
+.text-red-skr{
+    color: $red-skr;
+}
+.btn-red-skr{
+    background-color: $red-skr;
+    color: white;
+    font-weight: bold;
+    border:solid 2px transparent;
+    &:hover{
+        background-color: white;
+        color: $red-skr;
+        border-color: $red-skr; 
+        border-width: 2px;
+
+    }
+}
+
+.border-red-skr{
+    border-color: $red-skr !important;
+}

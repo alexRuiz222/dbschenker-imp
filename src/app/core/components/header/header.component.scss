@@ -1,0 +1,10 @@
+@import "bootstrap/scss/bootstrap";
+
+.nav-item.active{
+    font-weight: bold;
+    border-bottom: solid 2px $danger;
+    .nav-link{
+        color: $danger;
+    }
+}
+

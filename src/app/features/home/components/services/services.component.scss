@@ -1,0 +1,23 @@
+.services{
+    // on mobile add margin
+    @media screen and (max-width: 768px) {
+        margin-top:10rem;
+        
+    }   
+
+}
+
+.card-service{
+    text-align: center;
+    cursor: pointer ;
+    height: 175px;
+    width: 175px;
+    @media screen and (max-width: 460px) {
+      width: 100%;
+        
+    }  
+    font-size: 16px;
+    *.card-icon{
+        font-size: 85px;
+    }
+}
